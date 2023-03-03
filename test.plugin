@@ -1,0 +1,8 @@
+[Plugin]
+Authors=JCWasmx86 <JCWasmx86@t-online.de>
+Copyright=Copyright © 2023 JCWasmx86
+Description=Test plugin
+Loader=C
+Module=testplugin
+Name=TestPlugin
+X-Builder-ABI=44.0
