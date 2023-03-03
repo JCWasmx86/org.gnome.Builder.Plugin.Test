@@ -39,9 +39,9 @@
                 }
             ],
             "post-install": [
-				"install -v -d ${FLATPAK_DEST}",
-				"install -v -Dm755 libtestplugin.so ${FLATPAK_DEST}",
-				"install -v -Dm755 test.plugin ${FLATPAK_DEST}"
+				"install -v -d ${FLATPAK_DEST}/lib/gnome-builder/plugins",
+				"install -v -Dm755 libtestplugin.so ${FLATPAK_DEST}/lib/gnome-builder/plugins",
+				"install -v -Dm755 test.plugin ${FLATPAK_DEST}/lib/gnome-builder/plugins"
             ]
         }
     ]
