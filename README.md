@@ -1,3 +1,9 @@
 # org.gnome.builder.plugin.test
 
-A description of this project.
+An example how to write GNOME-Builder Nightly plugins using Flatpak extensions.
+
+
+## Install
+```
+flatpak-builder foo org.gnome.Builder.Plugin.Test.json  --force-clean --install --user
+```
