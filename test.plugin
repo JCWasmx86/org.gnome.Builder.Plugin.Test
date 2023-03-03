@@ -5,4 +5,4 @@ Description=Test plugin
 Loader=C
 Module=testplugin
 Name=TestPlugin
-X-Builder-ABI=44.0
+X-Builder-ABI=44
