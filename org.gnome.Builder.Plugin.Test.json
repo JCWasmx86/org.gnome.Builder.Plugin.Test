@@ -23,18 +23,25 @@
         "*.a"
     ],
     "build-options": {
-    	"prefix": "/app/lib/gnome-builder/",
+    	"prefix": "/app/lib/gnome-builder/plugins"
     },
     "modules" : [
         {
             "name" : "org.gnome.builder.plugin.test",
             "builddir" : true,
             "buildsystem" : "meson",
+            "no-make-install": true,
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "https://github.com/JCWasmx86/org.gnome.Builder.Plugin.Test"
+                    "url" : "https://github.com/JCWasmx86/org.gnome.Builder.Plugin.Test",
+                    "branch": "main"
                 }
+            ],
+            "post-install": [
+				"install -v -d ${FLATPAK_DEST}",
+				"install -v -Dm755 libtestplugin.so ${FLATPAK_DEST}",
+				"install -v -Dm755 test.plugin ${FLATPAK_DEST}"
             ]
         }
     ]
